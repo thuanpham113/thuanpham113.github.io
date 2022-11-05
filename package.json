@@ -1,5 +1,5 @@
 {
-  "name": "thuanpham113.github.io",
+  "name": "ploggvietnam",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13,10 +13,10 @@
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
+    "vue-template-compiler": "^2.7.10",
+    "vuetify": "^2.6.10"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^5.3.3",
-    "postcss": "^8.4.17"
+    "@nuxtjs/vuetify": "^1.12.3"
   }
 }
