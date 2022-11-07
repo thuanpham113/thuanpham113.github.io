@@ -1,0 +1,9 @@
+$sizes: (0, 25, 50, 75, 100);
+@each $size in $sizes {
+	.h-#{$size} {
+		height: $size * 1%;
+	}
+	.w-#{$size} {
+		width: $size * 1%;
+	}
+}
