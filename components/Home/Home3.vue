@@ -52,7 +52,7 @@
 								: 'rounded-lg black--text'
 						"
 						:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
-						:height="$vuetify.breakpoint.smAndDown ? '45' : '55'"
+						height="45"
 						href="https://www.google.com/intl/vi/gmail/about/"
 					>
 						<div>{{ $t("button.2") }}</div>

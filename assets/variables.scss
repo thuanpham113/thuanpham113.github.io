@@ -39,6 +39,15 @@ $headings: (
 @import "./scss/typography.scss";
 @import "./scss/header.scss";
 @import "./scss/progressbar.scss";
+@import "./scss/autofill.scss";
+@import "./scss/background.scss";
+@import "./scss/color.scss";
+@import "./scss/cursor.scss";
+@import "./scss/overlay.scss";
+@import "./scss/position.scss";
+@import "./scss/scroll.scss";
+@import "./scss/size.scss";
+@import "./scss/border.scss";
 
 .word-wrap-normal{
     word-wrap: normal;

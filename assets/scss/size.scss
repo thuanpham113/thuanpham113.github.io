@@ -1,9 +1,26 @@
-$sizes: (0, 25, 50, 75, 100);
-@each $size in $sizes {
-	.h-#{$size} {
-		height: $size * 1%;
+@for $size from 0 through 20 {
+	.h-#{$size * 5} {
+		height: $size * 5%;
 	}
-	.w-#{$size} {
-		width: $size * 1%;
+
+	.vh-#{$size * 5} {
+		height: $size * 5vh;
+	}
+
+	.w-#{$size * 5} {
+		width: $size * 5%;
+	}
+
+	.vw-#{$size * 5} {
+		width: $size * 5vw;
+	}
+}
+
+.width {
+	&-auto {
+		width: auto !important;
+	}
+	&-max {
+		width: 100% !important;
 	}
 }

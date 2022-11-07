@@ -1,6 +1,9 @@
 <template>
 	<v-menu :offset-x="x" :offset-y="y" transition="slide-y-transition">
 		<template #activator="{ attrs, on }">
+			<div class="text-uppercase text-h2">
+				{{$i18n.locale}}
+			</div>
 			<v-btn
 				height="height"
 				class="pa-0 white--text"
@@ -10,8 +13,8 @@
 				color="transparent"
 				plain
 				v-on="on"
+				icon
 			>
-				<v-icon large :color="color">mdi-translate</v-icon>
 				<v-icon :color="color">mdi-chevron-down</v-icon>
 			</v-btn>
 		</template>

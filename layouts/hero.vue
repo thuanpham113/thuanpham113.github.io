@@ -8,7 +8,7 @@
 			clipped-left
 			height="80vh"
 		>
-			<v-layout class="my-2">
+			<v-layout class="my-2 d-flex align-center justify-center">
 				<v-col
 					cols="10"
 					sm="11"
@@ -17,7 +17,6 @@
 				>
 					<nuxt-link to="/">
 						<v-img
-							width="105"
 							contain
 							src="/logo_ploggvn.svg"
 						></v-img>
@@ -26,29 +25,27 @@
 				<v-col class="d-md-none align-center d-flex">
 					<v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 				</v-col>
-				<v-col cols="7" class="d-none align-center d-md-flex">
-					<div>
-						<v-btn
-							v-for="(list, index) in lists"
-							:key="index"
-							:color="scrolled ? 'black' : 'black'"
-							class="transition font-weight-bold text-none"
-							text
-							:href="list.link"
-						>
-							<div class="h7">
-								{{ list.title }}
-							</div>
-						</v-btn>
-					</div>
+				<v-col cols="7" class="d-none d-md-flex align-center justify-center pa-0">
+					<v-btn
+						v-for="(list, index) in lists"
+						:key="index"
+						:color="scrolled ? 'black' : 'black'"
+						class="font-weight-bold text-none"
+						text
+						:href="list.link"
+					>
+						<div class="h7">
+							{{ list.title }}
+						</div>
+					</v-btn>
 				</v-col>
-				<v-col class="d-md-flex d-none align-center" cols="2">
+				<v-col class="d-md-flex d-none align-center justify-center" cols="2">
 					<kq-button-locale color="black" />
 				</v-col>
 			</v-layout>
 		</v-app-bar>
-		<v-navigation-drawer v-model="drawer" color="#cac5e5" absolute temporary>
-			<v-layout column>
+		<v-navigation-drawer v-model="drawer" absolute temporary>
+			<v-layout column justify-center align-center>
 				<v-btn
 					v-for="(list, index) in lists"
 					:key="index"
@@ -60,10 +57,11 @@
 						{{ list.title }}
 					</div>
 				</v-btn>
-				<kq-button-locale x height="10vh" color="deep-purple darken-4" />
+				<v-card outline class="d-flex justify-center align-center px-5">
+					<kq-button-locale height="10vh" color="deep-purple darken-4" />
+				</v-card>
 			</v-layout>
 		</v-navigation-drawer>
-		<kq-scroll-progress-bar v-if="scrolled"></kq-scroll-progress-bar>
 		<v-main v-if="$vuetify.breakpoint.smAndDown">
 			<v-container fluid class="pa-0" max-height="600">
 				<Nuxt />
@@ -72,7 +70,7 @@
 		<v-container v-else fluid class="pa-0" max-height="600">
 			<Nuxt />
 		</v-container>
-		<v-footer color="#EEEEEE" class=" white--text font-weight-light">
+		<v-footer class=" white--text font-weight-light">
 			<v-layout column>
 				<v-layout
 					:column="$vuetify.breakpoint.smAndDown"

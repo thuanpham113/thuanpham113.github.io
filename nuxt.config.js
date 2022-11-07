@@ -92,6 +92,7 @@ export default {
 			dark: false,
 			themes: {
 				light: {
+					background: colors.white,
 					primary: colors.blue.darken2,
 					accent: colors.grey.darken3,
 					secondary: colors.amber.darken3,

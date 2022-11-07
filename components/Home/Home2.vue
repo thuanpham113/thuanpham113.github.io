@@ -1,9 +1,9 @@
 <template>
 	<v-sheet
 		color="white"
-		class="d-flex flex-column flex-md-row align-center py-5 justify-center"
+		class="d-flex flex-column flex-md-row align-center justify-center"
 	>
-		<v-img aspect-ratio="1" width="50%" height="50%" src="/home2.jpg" />
+		<v-img height="55vh" contain src="/home2.png" class="ml-16"/>
 
 		<v-layout
 			:style="
@@ -22,15 +22,15 @@
 				class="justify-end"
 				:class="$vuetify.breakpoint.smAndDown ? ' pt-12' : 'mr-12'"
 			>
-				<h2 class="grey--text pb-12">Software development</h2>
-				<h3 class="justify-end"></h3>
+
+				<h2 class="grey--text pb-12">Software development <v-icon>mdi-xml</v-icon> </h2>
 			</v-row>
 			<v-col cols="14" class="mr-4">
 				<div
 					:class="
 						$vuetify.breakpoint.smAndDown
 							? 'h6 font-weight-bold text-center '
-							: 'h4 font-weight-bold'
+							: 'h4 font-weight-bold text-right mr-10'
 					"
 				>
 					{{ $t("title.1") }}
@@ -41,7 +41,7 @@
 					:class="
 						$vuetify.breakpoint.smAndDown
 							? 'mt-2  text-center'
-							: 'h6 pl-12'
+							: 'h6 pl-12 text-right mr-10'
 					"
 				>
 					{{ $t("title.2") }}
@@ -59,7 +59,7 @@
 								: 'rounded-lg black--text'
 						"
 						:color="hover ? 'grey darken-1' : 'cyan lighten-3'"
-						:height="$vuetify.breakpoint.smAndDown ? '45' : '55'"
+						height="45"
 						href="https://www.google.com/intl/vi/gmail/about/"
 					>
 						<div>{{ $t("button.2") }}</div>
