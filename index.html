@@ -1,80 +1,358 @@
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<!--<script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>-->
-<script src='../../../../aframe/build/aframe-ar-nft.js'></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phạm Nguyễn Thuận | Fullstack Developer & 3D Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<script>
-    window.onload = function() {
-        AFRAME.registerComponent('videohandler', {
-            init: function () {
-                var marker = this.el;
+<body>
+    <div class="ambient-light"></div>
 
-                this.vid = document.querySelector("#vid");
+    <header>
+        <div class="logo">thuanpham.github.io</div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+        </nav>
+        <a href="#contact" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Contact Me</a>
+    </header>
 
-                marker.addEventListener('markerFound', function () {
-                    this.vid.play();
-                }.bind(this));
+    <section id="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span> Available for new projects
+                </div>
+                <h1 class="hero-title">Building <span class="gradient-text">Digital Experiences</span> That Matter</h1>
+                <p class="hero-description">
+                    Hi, I'm <strong>Phạm Nguyễn Thuận</strong>. I start with a Mechanical Engineering background and now
+                    architect scalable 3D web applications and robust microservices.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Check My Work <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="hero-tech-stack">
+                    <span>Tech Stack:</span>
+                    <i class="fab fa-react" title="React/Next.js"></i>
+                    <i class="fab fa-node-js" title="Node.js/NestJS"></i>
+                    <i class="fas fa-cube" title="Three.js"></i>
+                    <i class="fab fa-docker" title="Docker"></i>
+                </div>
+            </div>
 
-		marker.addEventListener('markerLost', function() {
-			this.vid.pause();
-			this.vid.currentTime = 0;
-		}.bind(this));
-            }
-        });
-    };
-</script>
+            <div class="hero-visual">
+                <div class="profile-img-container">
+                    <div class="profile-glow"></div>
+                    <img src="https://github.com/user-attachments/assets/b3483ff5-bafb-404e-87f0-e2737e38c36c"
+                        alt="Phạm Nguyễn Thuận" class="profile-img">
 
-<style>
-    .arjs-loader {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+                    <!-- Floating Badges -->
+                    <div class="floating-badge badge-1">
+                        <i class="fas fa-code"></i> 4+ Years Exp
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <i class="fas fa-project-diagram"></i> Microservices
+                    </div>
+                    <div class="floating-badge badge-3">
+                        <i class="fas fa-cubes"></i> 3D Web
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    .arjs-loader div {
-        text-align: center;
-        font-size: 1.25em;
-        color: white;
-    }
-</style>
+    <section id="about">
+        <div class="section-header">
+            <span class="section-tag">INTRODUCTION</span>
+            <h2 class="section-title">Professional Summary</h2>
+        </div>
 
-<body style='margin : 0px; overflow: hidden;'>
-    <div class="arjs-loader">
-        <div>Loading, please wait...</div>
-    </div>
-    <a-scene
-        vr-mode-ui="enabled: false;"
-        renderer='antialias: true; alpha: true; precision: medium;'
-        embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Fullstack Developer with over four years of experience building scalable web applications featuring
+                    complex 3D visualizations and microservices architectures. Successfully delivered systems serving
+                    200+ medical facilities across Canada with optimized performance and reliability.</p>
+                <p>I combine my mechanical engineering background with modern web development expertise to create
+                    intuitive 3D interfaces and robust backend systems using Next.js, NestJS, Java Spring, and Three.js.
+                </p>
 
-        <a-assets>
-            <video src="mov_bbb.mp4"
-                preload="auto" id="vid" response-type="arraybuffer" loop
-                crossorigin webkit-playsinline autoplay muted playsinline>
-            </video>
-        </a-assets>
+                <ul class="info-list">
+                    <li><i class="fas fa-map-marker-alt"></i> Ho Chi Minh City, Vietnam</li>
+                    <li><i class="fas fa-globe"></i> thuanpham.work</li>
+                    <li><i class="fas fa-graduation-cap"></i> B.Eng in Mechatronics</li>
+                </ul>
+            </div>
 
-        <a-nft
-            videohandler
-            type='nft' url='../../data/dataNFT/pinball'
-            smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5"
-        >
-            <a-video
-                src="#vid"
-                position='50 150 -100'
-                rotation='90 0 180'
-                width='300'
-                height='175'
-                >
-            </a-video>
-        </a-nft>
-		<a-entity camera></a-entity>
-	</a-scene>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">4+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Clients Served</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Major Projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Commitment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-header">
+            <span class="section-tag">EXPERTISE</span>
+            <h2 class="section-title">Core Technologies</h2>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3 class="skill-title"><i class="fas fa-code"></i> Frontend</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">Nuxt.js</span>
+                    <span class="skill-tag">Vue.js</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">Three.js</span>
+                    <span class="skill-tag">Vuetify</span>
+                    <span class="skill-tag">Shadcn/UI</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-title"><i class="fas fa-server"></i> Backend</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">NestJS</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Java Spring Boot</span>
+                    <span class="skill-tag">GraphQL</span>
+                    <span class="skill-tag">RESTful API</span>
+                    <span class="skill-tag">Microservices</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-title"><i class="fas fa-database"></i> Database & Cloud</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Redis</span>
+                    <span class="skill-tag">Google Cloud</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">CI/CD</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-title"><i class="fas fa-star"></i> Specialized</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">3D Rendering</span>
+                    <span class="skill-tag">Model Optimization</span>
+                    <span class="skill-tag">Real-time Sync</span>
+                    <span class="skill-tag">Legacy Migration</span>
+                    <span class="skill-tag">Performance Tuning</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="section-header">
+            <span class="section-tag">JOURNEY</span>
+            <h2 class="section-title">Professional Experience</h2>
+        </div>
+
+        <div class="timeline">
+            <!-- Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">March 2025 – Aug 2025</span>
+                <h3 class="timeline-title">Fullstack Developer</h3>
+                <div class="timeline-company">Kidsplaza</div>
+                <p class="timeline-desc">Leading API migration from Magento 2 to NestJS microservices. Optimizing
+                    e-commerce infrastructure for thousands of daily users.</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">June 2024 – March 2025</span>
+                <h3 class="timeline-title">Fullstack Developer</h3>
+                <div class="timeline-company">Boostech</div>
+                <p class="timeline-desc">Architected material management platform using Next.js and Java Spring.
+                    Optimized PostgreSQL queries reducing execution time by 60%.</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">Sept 2021 – April 2024</span>
+                <h3 class="timeline-title">Fullstack Developer</h3>
+                <div class="timeline-company">Plogg Co. Ltd</div>
+                <p class="timeline-desc">Developed Synode.ai 3D assembly platform and Bipedortho e-commerce. Implemented
+                    complex 3D manipulations using Three.js and Nuxt.js.</p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">Sept 2020 – Jan 2021</span>
+                <h3 class="timeline-title">Intern</h3>
+                <div class="timeline-company">Bach Viet Art and Technology</div>
+                <p class="timeline-desc">Designed mechanical systems and executed installation projects. Technical
+                    specification documentation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-header">
+            <span class="section-tag">PORTFOLIO</span>
+            <h2 class="section-title">Key Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="project-tech">ED-TECH / AI</span>
+                    <h3 class="project-title">JOH Language Platform</h3>
+                    <div class="project-tags-list">
+                        <span class="project-tag-mini">Next.js 15</span>
+                        <span class="project-tag-mini">NestJS</span>
+                        <span class="project-tag-mini">OpenAI</span>
+                        <span class="project-tag-mini">Redis</span>
+                    </div>
+                    <p class="project-desc">Comprehensive English learning platform with AI-powered essay scoring and
+                        personalized feedback. Built with microservices-ready architecture using NestJS and BullMQ.</p>
+                    <a href="https://johlanguage.com" target="_blank" class="project-link">Visit Website <i
+                            class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="project-tech">3D / MANUFACTURING</span>
+                    <h3 class="project-title">Synode.ai</h3>
+                    <div class="project-tags-list">
+                        <span class="project-tag-mini">Three.js</span>
+                        <span class="project-tag-mini">Nuxt.js</span>
+                        <span class="project-tag-mini">Vue.js</span>
+                    </div>
+                    <p class="project-desc">Interactive 3D assembly guide platform for manufacturing clients. Features
+                        smooth 60fps rendering of complex geometries and text-to-speech integration.</p>
+                    <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="project-tech">E-COMMERCE / MEDICAL</span>
+                    <h3 class="project-title">Bipedortho</h3>
+                    <div class="project-tags-list">
+                        <span class="project-tag-mini">Nuxt.js</span>
+                        <span class="project-tag-mini">GCP</span>
+                        <span class="project-tag-mini">3D Viz</span>
+                    </div>
+                    <p class="project-desc">Medical e-commerce solution serving 200+ hospitals. Integrated 3D product
+                        visualization for profound equipment examination before purchase.</p>
+                    <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="project-tech">ENTERPRISE</span>
+                    <h3 class="project-title">Boostech Procurement</h3>
+                    <div class="project-tags-list">
+                        <span class="project-tag-mini">Java Spring</span>
+                        <span class="project-tag-mini">Next.js</span>
+                        <span class="project-tag-mini">PostgreSQL</span>
+                    </div>
+                    <p class="project-desc">Material management platform with automated quotation workflows. Optimized
+                        for datasets exceeding 100k records.</p>
+                    <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card">
+                <div class="project-content">
+                    <span class="project-tech">E-COMMERCE / MIGRATION</span>
+                    <h3 class="project-title">Kidsplaza Modernization</h3>
+                    <div class="project-tags-list">
+                        <span class="project-tag-mini">Next.js</span>
+                        <span class="project-tag-mini">NestJS</span>
+                        <span class="project-tag-mini">GraphQL</span>
+                    </div>
+                    <p class="project-desc">Migrated customer engagement modules from Magento 2 to NestJS microservices.
+                        Extended GraphQL gateway and improved API response times.</p>
+                    <a href="#" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <span class="section-tag">GET IN TOUCH</span>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+
+            <p class="contact-text">
+                Have a project in mind or want to discuss modern web technologies?
+                I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+            </p>
+
+            <div class="social-links">
+                <a href="mailto:thuandevelop@gmail.com" class="social-btn" title="Email">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email Me</span>
+                </a>
+                <a href="https://github.com/thuanpham113" class="social-btn" title="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://thuanpham.work/" class="social-btn" title="Portfolio">
+                    <i class="fas fa-globe"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="tel:+84909275913" class="social-btn" title="Phone">
+                    <i class="fas fa-phone"></i>
+                    <span>Call Me</span>
+                </a>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <p class="copyright">© 2025 Phạm Nguyễn Thuận. Built with Passion & Code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
+</html>
